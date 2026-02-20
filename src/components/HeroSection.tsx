@@ -1,17 +1,23 @@
 import { motion } from "framer-motion";
 import { TrendingUp, ArrowDown } from "lucide-react";
+import heroVideo from "@/assets/hero-video.mp4";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img
-          src={heroBg}
-          alt=""
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={heroBg}
           className="w-full h-full object-cover opacity-40"
-        />
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
       </div>
 
